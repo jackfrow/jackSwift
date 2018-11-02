@@ -13,8 +13,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        let simple = SimpleValue()
-        simple.showExample()
+        //简单值
+//        let simple = SimpleValue()
+//        simple.showExample()
+        
+        //控制流程
+        let controlFlow = ControlFlow()
+        controlFlow.showExample()
+        
+
         
         
     }
