@@ -18,10 +18,13 @@ class ViewController: UIViewController {
 //        simple.showExample()
         
         //控制流程
-        let controlFlow = ControlFlow()
-        controlFlow.showExample()
+//        let controlFlow = ControlFlow()
+//        controlFlow.showExample()
         
-
+        //函数和闭包
+        let fucClose = Functions_and_Closures()
+        fucClose.showExample()
+        
         
         
     }

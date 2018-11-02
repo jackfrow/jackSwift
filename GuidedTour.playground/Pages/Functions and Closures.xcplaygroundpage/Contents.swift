@@ -15,8 +15,8 @@ greet(person: "Bob", day: "Tuesday")
 func greet(_ person: String, on day: String) -> String {
     return "Hello \(person), today is \(day)."
 }
-greet("John", on: "Wednesday")
 
+greet("John", on: "Wednesday")
 //: Use a tuple to make a compound value—for example, to return multiple values from a function. The elements of a tuple can be referred to either by name or by number.
 //:
 func calculateStatistics(scores: [Int]) -> (min: Int, max: Int, sum: Int) {
