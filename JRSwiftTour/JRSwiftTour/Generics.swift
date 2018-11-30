@@ -60,5 +60,6 @@ func anyCommonElements<T: Sequence, U: Sequence>(_ lhs: T, _ rhs: U) -> [Any]
             }
         }
     }
+    
     return result
 }
