@@ -34,6 +34,7 @@ let aceRawValue = ace.rawValue
 //:
 if let convertedRank = Rank(rawValue: 3) {
     let threeDescription = convertedRank.simpleDescription()
+    print(threeDescription)
 }
 
 //: The case values of an enumeration are actual values, not just another way of writing their raw values. In fact, in cases where there isn’t a meaningful raw value, you don’t have to provide one.
@@ -72,6 +73,7 @@ enum ServerResponse {
 let success = ServerResponse.result("6:00 am", "8:09 pm")
 let failure = ServerResponse.failure("Out of cheese.")
 
+
 switch success {
     case let .result(sunrise, sunset):
         print("Sunrise is at \(sunrise) and sunset is at \(sunset).")
@@ -92,6 +94,7 @@ struct Card {
     func simpleDescription() -> String {
         return "The \(rank.simpleDescription()) of \(suit.simpleDescription())"
     }
+    
 }
 let threeOfSpades = Card(rank: .three, suit: .spades)
 let threeOfSpadesDescription = threeOfSpades.simpleDescription()

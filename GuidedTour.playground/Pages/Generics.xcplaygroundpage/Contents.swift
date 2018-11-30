@@ -20,7 +20,6 @@ enum OptionalValue<Wrapped> {
 }
 var possibleInteger: OptionalValue<Int> = .none
 possibleInteger = .some(100)
-
 //: Use `where` right before the body to specify a list of requirements—for example, to require the type to implement a protocol, to require two types to be the same, or to require a class to have a particular superclass.
 //:
 func anyCommonElements<T: Sequence, U: Sequence>(_ lhs: T, _ rhs: U) -> Bool
