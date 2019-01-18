@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  SwiftLanguageGuide
+//  SwiftGuideDemo
 //
-//  Created by jackfrow on 2018/11/30.
-//  Copyright © 2018 jackfrow. All rights reserved.
+//  Created by jackfrow on 2019/1/14.
+//  Copyright © 2019 jackfrow. All rights reserved.
 //
 
 import UIKit
