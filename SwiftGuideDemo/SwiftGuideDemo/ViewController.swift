@@ -26,7 +26,7 @@ class ViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let identifier = "cell"
+        let identifier = "cellIdentifier"
         var cell = tableView.dequeueReusableCell(withIdentifier: identifier)
         if cell == nil {
             cell = UITableViewCell(style: .default, reuseIdentifier: identifier)
