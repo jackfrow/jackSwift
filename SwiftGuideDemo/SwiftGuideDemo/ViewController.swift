@@ -17,6 +17,8 @@ class ViewController: UITableViewController {
      
         navigationItem.title = "Swift Guide"
         
+        print(navigationItem.title)
+        
     }
     
     //MARK: - UITableViewDataSource
