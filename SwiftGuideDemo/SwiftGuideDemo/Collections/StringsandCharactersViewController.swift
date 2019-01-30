@@ -104,6 +104,112 @@ two
         print(goodStart + end)
         
         
+        //7.字符串插值
+//        字符串插值是一种String通过在字符串文字中包含它们的值，从常量，变量，文字和表达式的混合构造新值的方法。您可以在单行和多行字符串文字中使用字符串插值。插入到字符串文字中的每个项目都包含在一对括号中，前缀为反斜杠（\）：
+        let multiplier = 3
+        let message = "\(multiplier) times 2.5 is \(Double(multiplier) * 2.5)"
+        print(message)
+        
+        //8.计算字符
+//        要检索Character字符串中值的计数，请使用字符串的count属性：
+        let unusualMenagerie = "Koala 🐨, Snail 🐌, Penguin 🐧, Dromedary 🐪"
+        print("unusualMenagerie has \(unusualMenagerie.count) characters")
+        // Prints "unusualMenagerie has 40 characters"
+        
+        //9.访问和修改字符串(您可以通过其方法和属性或使用下标语法来访问和修改字符串。)
+//        9.1 字符串索引
+//        您可以使用下标语法来访问Character特定String索引。
+        let greeting = "Guten Tag!"
+        print(greeting[greeting.startIndex])
+        // G
+     print(greeting[greeting.index(before: greeting.endIndex)])
+        // !
+       print(greeting[greeting.index(after: greeting.startIndex)])
+        // u
+        let index = greeting.index(greeting.startIndex, offsetBy: 7)
+      print(greeting[index])
+        // a
+        
+        
+//       使用该indices属性可以访问字符串中单个字符的所有索引。
+        for index in greeting.indices {
+            print("\(greeting[index]) ", terminator: "")
+        }
+        // Prints "G u t e n   T a g ! "
+        
+        
+        //9.2  插入和删除
+        var welcome2 = "hello"
+        welcome2.insert("!", at: welcome2.endIndex)
+        // welcome now equals "hello!"
+        
+        welcome2.insert(contentsOf: " there", at: welcome2.index(before: welcome2.endIndex))
+        // welcome now equals "hello there!"
+        
+        welcome.remove(at: welcome.index(before: welcome.endIndex))
+        // welcome now equals "hello there"
+        
+        let range = welcome.index(welcome.endIndex, offsetBy: -6)..<welcome.endIndex
+        welcome.removeSubrange(range)
+        
+        
+        //10.0 Substring
+        let greeting2 = "Hello, world!"
+        let index2 = greeting2.firstIndex(of: ",") ?? greeting2.endIndex
+        let beginning = greeting2[..<index2]
+        // beginning is "Hello"
+        
+        // Convert the result to a String for long-term storage.
+        let newString = String(beginning)
+        print(newString)
+        
+        //11. 比较字符串
+//        11.1 字符串和字符平等 (字符串和字符平等与“等于”运算符（检查==）和“不等于”运算符（!=），如在比较操作符：)
+        let quotation2 = "We're a lot alike, you and I."
+        let sameQuotation = "We're a lot alike, you and I."
+        if quotation2 == sameQuotation {
+            print("These two strings are considered equal")
+        }
+        // Prints "These two strings are considered equal"
+        
+        //11.2  前缀和后缀相等 (要检查字符串是否具有特定字符串前缀或后缀，请调用字符串hasPrefix(_:)和hasSuffix(_:)方法，两者都采用类型的单个参数String并返回布尔值。)
+        
+        let romeoAndJuliet = [
+            "Act 1 Scene 1: Verona, A public place",
+            "Act 1 Scene 2: Capulet's mansion",
+            "Act 1 Scene 3: A room in Capulet's mansion",
+            "Act 1 Scene 4: A street outside Capulet's mansion",
+            "Act 1 Scene 5: The Great Hall in Capulet's mansion",
+            "Act 2 Scene 1: Outside Capulet's mansion",
+            "Act 2 Scene 2: Capulet's orchard",
+            "Act 2 Scene 3: Outside Friar Lawrence's cell",
+            "Act 2 Scene 4: A street in Verona",
+            "Act 2 Scene 5: Capulet's mansion",
+            "Act 2 Scene 6: Friar Lawrence's cell"
+        ]
+//        您可以使用数组中的hasPrefix(_:)方法romeoAndJuliet来计算播放的第1幕中的场景数量：
+        var act1SceneCount = 0
+        for scene in romeoAndJuliet {
+            if scene.hasPrefix("Act 1 ") {
+                act1SceneCount += 1
+            }
+        }
+        print("There are \(act1SceneCount) scenes in Act 1")
+        // Prints "There are 5 scenes in Act 1"
+        
+//        同样，使用该hasSuffix(_:)方法计算在Capulet的豪宅和Friar Lawrence的单元格内或周围发生的场景数量：
+        var mansionCount = 0
+        var cellCount = 0
+        for scene in romeoAndJuliet {
+            if scene.hasSuffix("Capulet's mansion") {
+                mansionCount += 1
+            } else if scene.hasSuffix("Friar Lawrence's cell") {
+                cellCount += 1
+            }
+        }
+        print("\(mansionCount) mansion scenes; \(cellCount) cell scenes")
+        // Prints "6 mansion scenes; 2 cell scenes"
+        
     }
     
 
